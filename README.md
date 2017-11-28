@@ -1,25 +1,27 @@
-## Synopsis
+# SocialCalendar
 
-This is a descriprion of the super awesome cool new social calendar
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.2.
 
+## Development server
 
-## Installation
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-How does a user install and setup ...
+## Code scaffolding
 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## API Reference
+## Build
 
-Are we going to have any API exposed?
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Tests
+## Running unit tests
 
-TBD...
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Contributors
+## Running end-to-end tests
 
-How do we want to handle this aspect
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## License
+## Further help
 
-See LICENSE file
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
