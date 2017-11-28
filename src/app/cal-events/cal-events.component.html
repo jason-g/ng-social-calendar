@@ -3,8 +3,12 @@
     <label>New Event name:
       <input #calEventName />
     </label>
+    <label>Event details:
+      <input #calEventDateStart type="datetime-local">
+      <input #calEventDateEnd type="datetime-local">
+    </label>
     <!-- (click) passes input value to add() and then clears the input -->
-    <button (click)="add(calEventName.value); calEventName.value=''">
+    <button (click)="add(calEventName.value, calEventDateStart.value, calEventDateEnd.value); calEventName.value=''">
       add
     </button>
   </div>

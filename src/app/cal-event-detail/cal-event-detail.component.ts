@@ -37,4 +37,9 @@ export class CalEventDetailComponent implements OnInit {
       .subscribe(() => this.goBack());
   }
 
+  delete(): void {
+    this.calEventService.deleteCalEvent(this.calEvent)
+      .subscribe(() => this.goBack());
+  }
+
 }

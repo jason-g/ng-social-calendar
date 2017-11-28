@@ -8,6 +8,13 @@
       <input [(ngModel)]="calEvent.name" placeholder="name" />
     </label>
   </div>
+  <div>
+    <input [(ngModel)]="calEvent.dateStart" placeholder="dateStart" type="datetime-local">
+  </div>
+  <div>
+    <input [(ngModel)]="calEvent.dateEnd" placeholder="dateEnd" type="datetime-local">
+  </div>
   <button (click)="goBack()">go back</button>
   <button (click)="save()">save</button>
+  <button (click)="delete()">delete</button>
 </div>
