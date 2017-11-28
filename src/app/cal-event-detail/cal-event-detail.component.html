@@ -5,16 +5,22 @@
     <span>id: </span>{{calEvent.id}}</div>
   <div>
     <label>name:
-      <input [(ngModel)]="calEvent.name" placeholder="name" />
+        <mat-form-field>
+          <input matInput [(ngModel)]="calEvent.name" placeholder="name" />
+        </mat-form-field>
     </label>
   </div>
   <div>
-    <input [(ngModel)]="calEvent.dateStart" placeholder="dateStart" type="datetime-local">
+    <mat-form-field>
+      <input matInput [(ngModel)]="calEvent.dateStart" placeholder="dateStart" type="datetime-local">
+    </mat-form-field>
   </div>
   <div>
-    <input [(ngModel)]="calEvent.dateEnd" placeholder="dateEnd" type="datetime-local">
+    <mat-form-field>
+      <input matInput [(ngModel)]="calEvent.dateEnd" placeholder="dateEnd" type="datetime-local">
+    </mat-form-field>
   </div>
-  <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
-  <button (click)="delete()">delete</button>
+  <button mat-button (click)="goBack()">go back</button>
+  <button mat-button (click)="save()">save</button>
+  <button mat-button (click)="delete()">delete</button>
 </div>

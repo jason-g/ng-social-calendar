@@ -1,25 +1,56 @@
-<h2>My Upcoming Events</h2>
-<div>
-    <label>New Event name:
-      <input #calEventName />
-    </label>
-    <label>Event details:
-      <input #calEventDateStart type="datetime-local">
-      <input #calEventDateEnd type="datetime-local">
-    </label>
-    <!-- (click) passes input value to add() and then clears the input -->
-    <button (click)="add(calEventName.value, calEventDateStart.value, calEventDateEnd.value); calEventName.value=''">
-      add
-    </button>
-  </div>
-<ul class="calEvents">
-  <li *ngFor="let calEvent of calEvents">
-    <a routerLink="/detail/{{calEvent.id}}">
-      <span class="badge">{{calEvent.id}}</span> {{calEvent.name}}
-    </a>
-    <button class="delete" title="delete event"
-    (click)="delete(calEvent)">x</button>
-  </li>
-</ul>
 
 <app-cal-event-detail [calEvent]="selectedCalEvent"></app-cal-event-detail>
+<mat-tab-group class="demo-tab-group">
+  <mat-tab label="View scheduled events">
+    <div class="demo-tab-content">
+      <ul class="calEvents">
+        <li *ngFor="let calEvent of calEvents">
+          <a routerLink="/detail/{{calEvent.id}}">
+            <span class="badge">{{calEvent.dateStart}}</span>
+            {{calEvent.name}}
+          </a>
+          <button class="delete" title="delete event" (click)="delete(calEvent)">x</button>
+        </li>
+      </ul>
+    </div>
+  </mat-tab>
+  <mat-tab label="Add a new event">
+    <div class="demo-tab-content">
+      <div class="example-container">
+        <label>
+          Event Title:
+          <mat-form-field>
+            <input matInput #calEventName placeholder="New Event Title" />
+          </mat-form-field>
+        </label>
+        <br>
+        <label>
+          Start time:
+          <mat-form-field>
+            <input matInput #calEventDateStart type="datetime-local" />
+          </mat-form-field>
+        </label>
+        <br>
+        <label>
+          End time:
+          <mat-form-field>
+            <input matInput #calEventDateEnd type="datetime-local" />
+          </mat-form-field>
+        </label>
+        <br>
+        <!--
+        <mat-form-field>
+          <mat-select placeholder="enable?">
+            <mat-option value="enabled">enabled</mat-option>
+            <mat-option value="enabled">disabled</mat-option>
+          </mat-select>
+        </mat-form-field>
+        -->
+      <!-- (click) passes input value to add() and then clears the input -->
+      <button mat-button (click)="add(calEventName.value, calEventDateStart.value, calEventDateEnd.value); calEventName.value=''">
+        add
+      </button>
+      </div>
+    </div>
+  </mat-tab>
+  </mat-tab-group>

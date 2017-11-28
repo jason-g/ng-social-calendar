@@ -26,7 +26,7 @@ export class CalEventsComponent implements OnInit {
   add(name: string, dateStart: string, dateEnd: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.calEventService.addCalEvent({ name } as CalEvent)
+    this.calEventService.addCalEvent({ name: name, dateStart: dateStart, dateEnd: dateEnd } as CalEvent)
       .subscribe(calEvent => {
         this.calEvents.push(calEvent);
       });

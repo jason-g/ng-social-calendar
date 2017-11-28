@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { CalEventsComponent } from './cal-events/cal-events.component';
 import { CalEventDetailComponent } from './cal-event-detail/cal-event-detail.component';
@@ -27,6 +29,8 @@ import { CalEventSearchComponent } from './cal-event-search/cal-event-search.com
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule,
     HttpClientModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
