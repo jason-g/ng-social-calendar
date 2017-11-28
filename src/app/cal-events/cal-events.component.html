@@ -1,0 +1,21 @@
+<h2>My Upcoming Events</h2>
+<div>
+    <label>New Event name:
+      <input #calEventName />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(calEventName.value); calEventName.value=''">
+      add
+    </button>
+  </div>
+<ul class="calEvents">
+  <li *ngFor="let calEvent of calEvents">
+    <a routerLink="/detail/{{calEvent.id}}">
+      <span class="badge">{{calEvent.id}}</span> {{calEvent.name}}
+    </a>
+    <button class="delete" title="delete event"
+    (click)="delete(calEvent)">x</button>
+  </li>
+</ul>
+
+<app-cal-event-detail [calEvent]="selectedCalEvent"></app-cal-event-detail>
