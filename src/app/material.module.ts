@@ -7,11 +7,14 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatOptionModule,
-    MatSelectModule
+    MatSelectModule,
+    MatIconModule
 } from '@angular/material';
 
 @NgModule({
-  imports: [MatButtonModule, MatToolbarModule, MatTabsModule, MatFormFieldModule, MatInputModule, MatOptionModule, MatSelectModule ],
-  exports: [MatButtonModule, MatToolbarModule, MatTabsModule, MatFormFieldModule, MatInputModule, MatOptionModule, MatSelectModule],
+  imports: [MatButtonModule, MatToolbarModule, MatTabsModule, MatFormFieldModule,
+    MatInputModule, MatOptionModule, MatSelectModule, MatIconModule ],
+  exports: [MatButtonModule, MatToolbarModule, MatTabsModule, MatFormFieldModule,
+    MatInputModule, MatOptionModule, MatSelectModule, MatIconModule],
 })
 export class MaterialModule { }

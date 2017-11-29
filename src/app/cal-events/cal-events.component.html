@@ -9,7 +9,7 @@
             <span class="badge">{{calEvent.dateStart}}</span>
             {{calEvent.name}}
           </a>
-          <button class="delete" title="delete event" (click)="delete(calEvent)">x</button>
+          <i class="material-icons delete" title="delete event" (click)="delete(calEvent)">delete_forever</i>
         </li>
       </ul>
     </div>
@@ -47,7 +47,7 @@
         </mat-form-field>
         -->
       <!-- (click) passes input value to add() and then clears the input -->
-      <button mat-button (click)="add(calEventName.value, calEventDateStart.value, calEventDateEnd.value); calEventName.value=''">
+      <button mat-raised-button color="primary" (click)="add(calEventName.value, calEventDateStart.value, calEventDateEnd.value); calEventName.value=''">
         add
       </button>
       </div>

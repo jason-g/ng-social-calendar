@@ -1,7 +1,7 @@
 <div *ngIf="calEvent">
 
   <h2>{{ calEvent.name | uppercase }} Details</h2>
-  <div>
+  <div style="display:none;">
     <span>id: </span>{{calEvent.id}}</div>
   <div>
     <label>name:
@@ -20,7 +20,7 @@
       <input matInput [(ngModel)]="calEvent.dateEnd" placeholder="dateEnd" type="datetime-local">
     </mat-form-field>
   </div>
-  <button mat-button (click)="goBack()">go back</button>
-  <button mat-button (click)="save()">save</button>
-  <button mat-button (click)="delete()">delete</button>
+  <button mat-raised-button color="primary" (click)="goBack()">go back</button>
+  <button mat-raised-button color="primary" (click)="save()">save</button>
+  <button mat-raised-button color="primary" (click)="delete()">delete</button>
 </div>

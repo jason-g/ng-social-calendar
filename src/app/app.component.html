@@ -1,16 +1,21 @@
 <h1>{{title}}</h1>
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span>Social Calendar</span>
-  
-      <span class="example-spacer"></span>
-      
-    <a routerLink="/dashboard">
-      <button mat-button>Dashboard</button>
-    </a>
-    <a routerLink="/calEvents">
-      <button mat-button>Event Manager</button>
-    </a>
+        <span>Social Calendar</span>
+
+        <span class="example-spacer"></span>
+
+        <a routerLink="/dashboard">
+            <button mat-button>
+                Dashboard
+            </button>
+            <!--
+                <mat-icon class="material-icon">dashboard</mat-icon>
+            -->
+        </a>
+        <a routerLink="/calEvents">
+            <button mat-button>Event Manager</button>
+        </a>
     </mat-toolbar-row>
-  </mat-toolbar>
+</mat-toolbar>
 <router-outlet></router-outlet>

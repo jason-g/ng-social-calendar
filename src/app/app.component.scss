@@ -11,9 +11,11 @@ h1 {
   body {
     margin: 2em;
   }
-  body, input[text], button {
+  body, input[text]{
     color: #888;
-    font-family: Cambria, Georgia;
+  }
+  button {
+    color: #EEE;
   }
   /* everywhere else */
   * {
