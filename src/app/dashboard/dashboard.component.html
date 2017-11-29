@@ -1,5 +1,7 @@
-<i class="material-icons">dashboard</i>
 <h3>Upcoming events</h3>
+<div>
+  <app-cal-event-search></app-cal-event-search>
+</div>
 <div class="grid grid-pad">
   <a *ngFor="let calEvent of calEvents" class="col-1-4" routerLink="/detail/{{calEvent.id}}">
     <div class="module calEvent">
@@ -8,5 +10,3 @@
     </div>
   </a>
 </div>
-
-<app-cal-event-search></app-cal-event-search>

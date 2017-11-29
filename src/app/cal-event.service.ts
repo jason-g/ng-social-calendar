@@ -32,17 +32,6 @@ export class CalEventService {
     );
   }
 
-  searchCalEventes(term: string): Observable<CalEvent[]> {
-    if (!term.trim()) {
-      // if not search term, return empty calEvent array.
-      return of([]);
-    }
-    return this.http.get<CalEvent[]>(`api/calEvents/?name=${term}`).pipe(
-      tap(_ => console.log(`found calEvents matching "${term}"`)),
-      catchError(this.handleError<CalEvent[]>('searchCalEvents', []))
-    );
-  }
-
   updateCalEvent(calEvent: CalEvent): Observable<any> {
     return this.http.put(this.calEventsUrl, calEvent, httpOptions).pipe(
       tap(_ => console.log(`updated calEvent id=${calEvent.id}`)),
@@ -52,7 +41,7 @@ export class CalEventService {
 
   addCalEvent(calEvent: CalEvent): Observable<CalEvent> {
     return this.http.post<CalEvent>(this.calEventsUrl, calEvent, httpOptions).pipe(
-      tap((calEvent: CalEvent) => console.log(`added calEvent id=${calEvent.id}`)),
+      tap(_ => console.log(`added calEvent id=${calEvent.id}`)),
       catchError(this.handleError<CalEvent>('addCalEvent'))
     );
   }

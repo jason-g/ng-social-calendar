@@ -24,6 +24,9 @@ export class CalEventDetailComponent implements OnInit {
 
   getCalEvent(): void {
     const id = +this.route.snapshot.paramMap.get('id');
+    if (id === 0) {
+      return;
+    }
     this.calEventService.getCalEvent(id)
       .subscribe(calEvent => this.calEvent = calEvent);
   }
